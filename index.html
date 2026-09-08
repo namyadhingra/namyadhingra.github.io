@@ -1,10 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Namya Dhingra — Computer Science, IIT Jodhpur</title>
+<meta name="description" content="Namya Dhingra — B.Tech Computer Science and Engineering, IIT Jodhpur. Vision-language model research, ML engineering, and community building.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>Hello world! This is my brand new personal page hosted on GitHub.</p>
+
+<div class="layout">
+
+  <!-- ===== IDENTITY RAIL ===== -->
+  <aside class="rail">
+    <div class="rail-top">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="48" height="48">
+          <rect x="0" y="0" width="22" height="22" fill="var(--indigo)"/>
+          <rect x="26" y="0" width="22" height="22" fill="var(--sand)"/>
+          <rect x="0" y="26" width="22" height="22" fill="var(--sand)"/>
+          <rect x="26" y="26" width="22" height="22" fill="var(--indigo)"/>
+        </svg>
+      </div>
+      <h1 class="rail-name">Namya<br>Dhingra</h1>
+      <p class="rail-role">B.Tech, Computer Science &amp; Engineering<br>IIT Jodhpur — Class of 2027</p>
+    </div>
+
+    <nav class="rail-nav" aria-label="Section navigation">
+      <a href="#about"><span class="nav-index">About</span></a>
+      <a href="#research"><span class="nav-index">Research</span></a>
+      <a href="#experience"><span class="nav-index">Experience</span></a>
+      <a href="#projects"><span class="nav-index">Projects</span></a>
+      <a href="#community"><span class="nav-index">Community</span></a>
+      <a href="#contact"><span class="nav-index">Contact</span></a>
+    </nav>
+
+    <div class="rail-links">
+      <a href="https://github.com/namyadhingra" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/namyadhingra/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:namyadhingra.stud@gmail.com">Email</a>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="content">
+
+    <!-- HERO / ABOUT -->
+    <section id="about" class="section hero">
+      <div class="patch-grid" aria-hidden="true"></div>
+      <p class="eyebrow">Computer Science undergrad · Jodhpur, India</p>
+      <h2 class="hero-line">I build systems that see, read,<br>and try not to lie to you.</h2>
+      <p class="hero-body">
+        I'm a final-year Computer Science and Engineering student at IIT Jodhpur, currently
+        split between machine learning research, software internships, and organizing things
+        for other people on campus. Most of my work sits somewhere between vision, language,
+        and the question of whether a model's confidence is actually earned.
+      </p>
+      <p class="hero-body">
+        Outside of that: I have mentored incoming students, run technical events, coordinate
+        photography sessions, and once played inter-IIT basketball. I like problems that
+        don't have clean answers yet.
+      </p>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Fair distillation for vision-language models</h3>
+          <span class="entry-date">Ongoing</span>
+        </div>
+        <p class="entry-sub">Undergraduate Research Assistant, under Prof. Deepak Mishra — IIT Jodhpur</p>
+        <p>
+          The question I'm working on: if a teacher model is biased, can you still train a
+          fair student from it? I'm using Qwen2.5-VL-7B as the teacher and Qwen2.5-VL-3B as
+          the student, starting with offline sparse logit distillation to establish a
+          naive-distillation baseline, before applying <strong>Direct Steering Optimization
+          (DSO)</strong> to explicitly steer the student away from inherited bias.
+        </p>
+        <p>
+          Early stage.
+        </p>
+      </article>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <p class="section-label">Experience</p>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Tech Mahindra</h3>
+          <span class="entry-date">May – Jul 2026</span>
+        </div>
+        <p class="entry-sub">Software Development Engineer Intern · On-site</p>
+        <p>
+          Rebuilt an insurance-claim document pipeline as modular LangGraph state machines,
+          cutting manual PDF generation effort by 99.8%. Parallelized batch generation across
+          process pools with DynamoDB-backed uniqueness guarantees, and built a
+          configuration-driven engine so the same system could serve multiple client profiles
+          without new code per client.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Newgen Software Technologies</h3>
+          <span class="entry-date">May – Jul 2025</span>
+        </div>
+        <p class="entry-sub">Machine Learning Intern (Industrial Trainee) · Remote</p>
+        <p>
+          Built retrieval pipelines over 100+ RBI regulatory PDFs using Milvus and Tesseract
+          OCR, then compared dense, sparse, and hybrid retrieval with Alibaba GTE-large
+          embeddings under a custom evaluation framework.
+        </p>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <p class="section-label">Projects</p>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Personal Multimodal AI Agent</h3>
+          <span class="entry-date">2026 — in progress</span>
+        </div>
+        <p class="entry-sub">Local AGI-lite: a modular agent I'm building for myself</p>
+        <p>
+          A local-first assistant with persistent memory: document ingestion across PDF/DOCX/TXT
+          via chunked FAISS retrieval, independent modality modules for speech (Whisper), vision
+          (CLIP/BLIP), and OCR, orchestrated with LangGraph over a dual-layer PostgreSQL +
+          vector-DB memory. Working toward a FastAPI layer for deployment.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>FaceChain</h3>
+          <span class="entry-date">Team project</span>
+        </div>
+        <p class="entry-sub">Face recognition with blockchain-anchored provenance</p>
+        <p>
+          A pipeline that detects a face, searches the open web for matches, and anchors the
+          result on a tamper-evident custom blockchain — so a match record can prove it
+          <em>hasn't been altered</em> since it was made, even though it can't prove the match
+          itself is correct. Built with InsightFace, SerpApi reverse-image search, and SHA-256
+          Proof-of-Work blocks.
+        </p>
+        <a class="entry-link" href="https://github.com/namyadhingra/face-recognition-blockchain-verification" target="_blank" rel="noopener">View repository →</a>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>EatWise</h3>
+          <span class="entry-date">Jan – Apr 2025</span>
+        </div>
+        <p class="entry-sub">Food recognition and nutrition estimation</p>
+        <p>
+          A YOLOv8 model trained on 5,000+ annotated Indian food images plus Food-101 and
+          Nutrition5k, wired into a mobile app for real-time recognition and nutritional
+          insight.
+        </p>
+      </article>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community" class="section">
+      <p class="section-label">Community</p>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Student Guide, Wellbeing Committee</h3>
+          <span class="entry-date">Jul 2024 – Feb 2025</span>
+        </div>
+        <p>
+          Guided freshmen through the transition from JEE-prep life to college — the part
+          nobody prepares you for. Independence, homesickness, knowing who to even ask for
+          help. Coordinated with on-campus counsellors when things needed more than a
+          conversation.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Vertical Head, Prometeo 2026</h3>
+          <span class="entry-date">Nov 2025 – Jan 2026</span>
+        </div>
+        <p>
+          Led a team of 45 across online, cybersecurity, and robotics events at IIT Jodhpur's
+          tech fest — coordinating assistant heads, festival chiefs, faculty advisors, and
+          sponsors, and working across marketing and logistics to get participants where they
+          needed to be.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Mentor, Photography Club</h3>
+          <span class="entry-date">Aug 2025 – Present</span>
+        </div>
+        <p>
+          Run hands-on sessions for newer members and help manage logistics at club events —
+          a good excuse to keep learning a craft that has nothing to do with a keyboard.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Rewriting the Code</h3>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <p>
+          Member of a 50K+ global women-in-tech community.
+        </p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Women's Basketball</h3>
+          <span class="entry-date">2023 – 2024</span>
+        </div>
+        <p>
+          Part of IIT Jodhpur's team at the Inter-IIT Sports Meet 2023.
+        </p>
+      </article>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="section footer">
+      <p class="section-label">Contact</p>
+      <p class="footer-line">
+        Best reached at <a href="mailto:namyadhingra.stud@gmail.com">namyadhingra.stud@gmail.com</a>
+        (or <a href="mailto:b23cs1040@iitj.ac.in">b23cs1040@iitj.ac.in</a>)
+        — or find me on <a href="https://github.com/namyadhingra" target="_blank" rel="noopener">GitHub</a>
+        and <a href="https://www.linkedin.com/in/namyadhingra/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+      <p class="footer-meta">Jodhpur, India — last updated 2026</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
